@@ -1,9 +1,9 @@
 require "./spec_helper"
 
 describe I3 do
-  # TODO: Write tests
-
-  it "works" do
-    false.should eq(true)
+  it "acts" do
+    I3.act do |con|
+      con.should be_a(I3::Connection)
+    end
   end
 end
