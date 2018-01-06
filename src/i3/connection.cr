@@ -173,7 +173,7 @@ module I3
     # Pumps request `Message`s sent over the channel to the i3 IPC socket.
     private def pump_requests!
       spawn do
-        until requests.closed?
+        until socket.closed?
           msg = requests.receive
           socket.write_bytes(msg)
         end
