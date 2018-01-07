@@ -44,8 +44,8 @@ module I3
     # The type of the message.
     getter type : MessageType | ReplyType | EventType
 
-    # The length of the message, in bytes.
-    getter length : Int32
+    # The size of the message, in bytes.
+    getter size : Int32
 
     # The message's payload, as a string.
     getter payload : String
@@ -58,9 +58,9 @@ module I3
 
       raise Error.new("missing or malformed message magic") unless magic && magic == MAGIC
 
-      length = io.read_bytes Int32, format
+      size = io.read_bytes Int32, format
       typeno = io.read_bytes Int32, format
-      payload = io.gets(length)
+      payload = io.gets(size)
 
       type = if (typeno >> 31).zero?
                MessageType.new(typeno)
@@ -68,14 +68,14 @@ module I3
                EventType.new(typeno & 0x7F)
              end
 
-      raise Error.new("missing or malformed payload") unless payload && payload.bytesize == length
+      raise Error.new("missing or malformed payload") unless payload && payload.bytesize == size
 
       new(type, payload)
     end
 
     # Creates a new `Message` with the given *type* and *payload*.
     def initialize(@type, @payload = "")
-      @length = @payload.size
+      @size = @payload.size
     end
 
     # Returns whether the current message is an event.
@@ -86,14 +86,14 @@ module I3
     # Writes this instance to the given `IO`, in the format used by i3.
     def to_io(io, format = Fmt)
       io << MAGIC
-      io.write_bytes length, format
+      io.write_bytes size, format
       io.write_bytes type.to_i, format
       io << payload
     end
 
     # Write a human-friendly representation of this `Message` to the given IO.
     def to_s(io)
-      io << "#{type}: #{payload} (#{length})"
+      io << "#{type}: #{payload} (#{size})"
     end
   end
 end
