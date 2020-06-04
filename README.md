@@ -1,6 +1,8 @@
 i3.cr
 =====
 
+![license](https://raster.shields.io/badge/license-MIT%20with%20restrictions-green.png)
+
 A Crystal interface to the i3 window manager, using i3's
 [IPC protocol](https://i3wm.org/docs/ipc.html).
 
