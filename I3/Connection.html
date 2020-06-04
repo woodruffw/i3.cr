@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.33.0">
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="github.com/woodruffw/i3.cr">
+  <title>I3::Connection - github.com/woodruffw/i3.cr</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="github.com/woodruffw/i3.cr/I3" data-name="i3">
+      <a href="../I3.html">I3</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="github.com/woodruffw/i3.cr/I3/Connection" data-name="i3::connection">
+      <a href="../I3/Connection.html">Connection</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Error" data-name="i3::error">
+      <a href="../I3/Error.html">Error</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/woodruffw/i3.cr/I3/Message" data-name="i3::message">
+      <a href="../I3/Message.html">Message</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/woodruffw/i3.cr/I3/Message/Bar" data-name="i3::message::bar">
+      <a href="../I3/Message/Bar.html">Bar</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/Bar/Colors" data-name="i3::message::bar::colors">
+      <a href="../I3/Message/Bar/Colors.html">Colors</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/Config" data-name="i3::message::config">
+      <a href="../I3/Message/Config.html">Config</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/woodruffw/i3.cr/I3/Message/Event" data-name="i3::message::event">
+      <a href="../I3/Message/Event.html">Event</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/Event/BarConfigUpdate" data-name="i3::message::event::barconfigupdate">
+      <a href="../I3/Message/Event/BarConfigUpdate.html">BarConfigUpdate</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/woodruffw/i3.cr/I3/Message/Event/Binding" data-name="i3::message::event::binding">
+      <a href="../I3/Message/Event/Binding.html">Binding</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/Event/Binding/Binding" data-name="i3::message::event::binding::binding">
+      <a href="../I3/Message/Event/Binding/Binding.html">Binding</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/Event/Mode" data-name="i3::message::event::mode">
+      <a href="../I3/Message/Event/Mode.html">Mode</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/Event/Output" data-name="i3::message::event::output">
+      <a href="../I3/Message/Event/Output.html">Output</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/Event/Shutdown" data-name="i3::message::event::shutdown">
+      <a href="../I3/Message/Event/Shutdown.html">Shutdown</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/Event/Window" data-name="i3::message::event::window">
+      <a href="../I3/Message/Event/Window.html">Window</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/Event/Workspace" data-name="i3::message::event::workspace">
+      <a href="../I3/Message/Event/Workspace.html">Workspace</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/EventType" data-name="i3::message::eventtype">
+      <a href="../I3/Message/EventType.html">EventType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/Fmt" data-name="i3::message::fmt">
+      <a href="../I3/Message/Fmt.html">Fmt</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/MessageType" data-name="i3::message::messagetype">
+      <a href="../I3/Message/MessageType.html">MessageType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/Output" data-name="i3::message::output">
+      <a href="../I3/Message/Output.html">Output</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/Rect" data-name="i3::message::rect">
+      <a href="../I3/Message/Rect.html">Rect</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/ReplyType" data-name="i3::message::replytype">
+      <a href="../I3/Message/ReplyType.html">ReplyType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/Status" data-name="i3::message::status">
+      <a href="../I3/Message/Status.html">Status</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/Tree" data-name="i3::message::tree">
+      <a href="../I3/Message/Tree.html">Tree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/Version" data-name="i3::message::version">
+      <a href="../I3/Message/Version.html">Version</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/woodruffw/i3.cr/I3/Message/Workspace" data-name="i3::message::workspace">
+      <a href="../I3/Message/Workspace.html">Workspace</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> I3::Connection
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../I3/Connection.html">I3::Connection</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Represents a connection to a local i3 IPC server.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/woodruffw/i3.cr/blob/7047067c10a13c47aa0c479d65a9092753f6e91d/src/i3/connection.cr#L5" target="_blank">
+        i3/connection.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        
+          <div class="summary"><p>Creates a new <code><a href="../I3/Connection.html">Connection</a></code>.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#bar_config(bar)-instance-method" class="signature"><strong>#bar_config</strong>(bar)</a>
+        
+          <div class="summary"><p>Returns a <code><a href="../I3/Message/Bar.html">Message::Bar</a></code> corresponding to the given bar ID.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bar_ids-instance-method" class="signature"><strong>#bar_ids</strong></a>
+        
+          <div class="summary"><p>Returns an array of strings, each identifying an i3 bar.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#binding_modes-instance-method" class="signature"><strong>#binding_modes</strong></a>
+        
+          <div class="summary"><p>Returns an array of strings, each signifying a currently configured binding mode.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#close-instance-method" class="signature"><strong>#close</strong></a>
+        
+          <div class="summary"><p>Close this instance's connection to the IPC server.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#command(cmd)-instance-method" class="signature"><strong>#command</strong>(cmd)</a>
+        
+          <div class="summary"><p>Send an (i3) command to i3.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#config-instance-method" class="signature"><strong>#config</strong></a>
+        
+          <div class="summary"><p>Returns a <code><a href="../I3/Message/Config.html">Message::Config</a></code> corresponding to the running i3's most recent configuration.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#marks-instance-method" class="signature"><strong>#marks</strong></a>
+        
+          <div class="summary"><p>Returns an array of strings for each container that has a mark.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#on_event(&)-instance-method" class="signature"><strong>#on_event</strong>(&)</a>
+        
+          <div class="summary"><p>Yields the last unconsumed event (see classes in <code><a href="../I3/Message/Event.html">Message::Event</a></code>).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#outputs-instance-method" class="signature"><strong>#outputs</strong></a>
+        
+          <div class="summary"><p>Returns an array of all <code><a href="../I3/Message/Output.html">Message::Output</a></code>s known to i3.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#socket_path:String-instance-method" class="signature"><strong>#socket_path</strong> : String</a>
+        
+          <div class="summary"><p>The path to the socket being used for the connection.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#subscribe(event_names:Enumerable(String))-instance-method" class="signature"><strong>#subscribe</strong>(event_names : Enumerable(String))</a>
+        
+          <div class="summary"><p>Subscribe to each event in <em>event_names</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#subscribe(event_name:String)-instance-method" class="signature"><strong>#subscribe</strong>(event_name : String)</a>
+        
+          <div class="summary"><p>Subscribe to a single event.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tree-instance-method" class="signature"><strong>#tree</strong></a>
+        
+          <div class="summary"><p>Returns a <code><a href="../I3/Message/Tree.html">Message::Tree</a></code> corresponding to the current i3 window tree.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#version-instance-method" class="signature"><strong>#version</strong></a>
+        
+          <div class="summary"><p>Returns a <code><a href="../I3/Message/Version.html">Message::Version</a></code> corresponding to i3's version information.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#workspaces-instance-method" class="signature"><strong>#workspaces</strong></a>
+        
+          <div class="summary"><p>Returns an array of all <code><a href="../I3/Message/Workspace.html">Message::Workspace</a></code>s known to i3.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>
+
+        <a class="method-permalink" href="#new-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Creates a new <code><a href="../I3/Connection.html">Connection</a></code>.</p>
+
+<p>Raises an <code><a href="../I3/Error.html">Error</a></code> if the connection can't be created.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/i3.cr/blob/7047067c10a13c47aa0c479d65a9092753f6e91d/src/i3/connection.cr#L23" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="bar_config(bar)-instance-method">
+      <div class="signature">
+        
+        def <strong>bar_config</strong>(bar)
+
+        <a class="method-permalink" href="#bar_config(bar)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns a <code><a href="../I3/Message/Bar.html">Message::Bar</a></code> corresponding to the given bar ID.</p>
+
+<p>Bar IDs can be retrieved via <code><a href="../I3/Connection.html#bar_ids-instance-method">#bar_ids</a></code>.</p>
+
+<pre><code><span class="c"># get the config for the first bar</span>
+con.bar_config(con.bar_ids.first)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/i3.cr/blob/7047067c10a13c47aa0c479d65a9092753f6e91d/src/i3/connection.cr#L148" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bar_ids-instance-method">
+      <div class="signature">
+        
+        def <strong>bar_ids</strong>
+
+        <a class="method-permalink" href="#bar_ids-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns an array of strings, each identifying an i3 bar.</p>
+
+<p>Elements of this array can be fed into <code><a href="../I3/Connection.html#bar_config(bar)-instance-method">#bar_config</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/i3.cr/blob/7047067c10a13c47aa0c479d65a9092753f6e91d/src/i3/connection.cr#L136" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="binding_modes-instance-method">
+      <div class="signature">
+        
+        def <strong>binding_modes</strong>
+
+        <a class="method-permalink" href="#binding_modes-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns an array of strings, each signifying a currently configured binding mode.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/i3.cr/blob/7047067c10a13c47aa0c479d65a9092753f6e91d/src/i3/connection.cr#L158" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="close-instance-method">
+      <div class="signature">
+        
+        def <strong>close</strong>
+
+        <a class="method-permalink" href="#close-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Close this instance's connection to the IPC server.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/i3.cr/blob/7047067c10a13c47aa0c479d65a9092753f6e91d/src/i3/connection.cr#L38" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="command(cmd)-instance-method">
+      <div class="signature">
+        
+        def <strong>command</strong>(cmd)
+
+        <a class="method-permalink" href="#command(cmd)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Send an (i3) command to i3.</p>
+
+<p>Returns an array of <code><a href="../I3/Message/Status.html">Message::Status</a></code> indicating the success of the commands.</p>
+
+<pre><code><span class="c"># send a single command</span>
+con.command <span class="s">&quot;sticky enable&quot;</span>
+
+<span class="c"># send two commands</span>
+con.command <span class="s">&quot;workspace 1; sticky enable&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/i3.cr/blob/7047067c10a13c47aa0c479d65a9092753f6e91d/src/i3/connection.cr#L53" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="config-instance-method">
+      <div class="signature">
+        
+        def <strong>config</strong>
+
+        <a class="method-permalink" href="#config-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns a <code><a href="../I3/Message/Config.html">Message::Config</a></code> corresponding to the running i3's most recent configuration.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/i3.cr/blob/7047067c10a13c47aa0c479d65a9092753f6e91d/src/i3/connection.cr#L163" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="marks-instance-method">
+      <div class="signature">
+        
+        def <strong>marks</strong>
+
+        <a class="method-permalink" href="#marks-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns an array of strings for each container that has a mark.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/i3.cr/blob/7047067c10a13c47aa0c479d65a9092753f6e91d/src/i3/connection.cr#L129" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="on_event(&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>on_event</strong>(&)
+
+        <a class="method-permalink" href="#on_event(&)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Yields the last unconsumed event (see classes in <code><a href="../I3/Message/Event.html">Message::Event</a></code>).</p>
+
+<p>Events are yielded in FIFO order.</p>
+
+<pre><code>con.on_event <span class="k">do</span> <span class="o">|</span>event<span class="o">|</span>
+  <span class="c"># check the actual event type</span>
+<span class="k">end</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/i3.cr/blob/7047067c10a13c47aa0c479d65a9092753f6e91d/src/i3/connection.cr#L93" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="outputs-instance-method">
+      <div class="signature">
+        
+        def <strong>outputs</strong>
+
+        <a class="method-permalink" href="#outputs-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns an array of all <code><a href="../I3/Message/Output.html">Message::Output</a></code>s known to i3.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/i3.cr/blob/7047067c10a13c47aa0c479d65a9092753f6e91d/src/i3/connection.cr#L119" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="socket_path:String-instance-method">
+      <div class="signature">
+        
+        def <strong>socket_path</strong> : String
+
+        <a class="method-permalink" href="#socket_path:String-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The path to the socket being used for the connection.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/i3.cr/blob/7047067c10a13c47aa0c479d65a9092753f6e91d/src/i3/connection.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="subscribe(event_names:Enumerable(String))-instance-method">
+      <div class="signature">
+        
+        def <strong>subscribe</strong>(event_names : Enumerable(String))
+
+        <a class="method-permalink" href="#subscribe(event_names:Enumerable(String))-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Subscribe to each event in <em>event_names</em>.</p>
+
+<p>Events can be retrieved one-at-a-time via <code><a href="../I3/Connection.html#on_event(&)-instance-method">#on_event</a></code>.</p>
+
+<pre><code>con.subscribe [<span class="s">&quot;workspace&quot;</span>, <span class="s">&quot;output&quot;</span>]</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/i3.cr/blob/7047067c10a13c47aa0c479d65a9092753f6e91d/src/i3/connection.cr#L69" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="subscribe(event_name:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>subscribe</strong>(event_name : String)
+
+        <a class="method-permalink" href="#subscribe(event_name:String)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Subscribe to a single event.</p>
+
+<p>Events can be retrieved one-at-a-time via <code><a href="../I3/Connection.html#on_event(&)-instance-method">#on_event</a></code>.</p>
+
+<pre><code>con.subscribe <span class="s">&quot;workspace&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/i3.cr/blob/7047067c10a13c47aa0c479d65a9092753f6e91d/src/i3/connection.cr#L80" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tree-instance-method">
+      <div class="signature">
+        
+        def <strong>tree</strong>
+
+        <a class="method-permalink" href="#tree-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns a <code><a href="../I3/Message/Tree.html">Message::Tree</a></code> corresponding to the current i3 window tree.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/i3.cr/blob/7047067c10a13c47aa0c479d65a9092753f6e91d/src/i3/connection.cr#L124" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="version-instance-method">
+      <div class="signature">
+        
+        def <strong>version</strong>
+
+        <a class="method-permalink" href="#version-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns a <code><a href="../I3/Message/Version.html">Message::Version</a></code> corresponding to i3's version information.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/i3.cr/blob/7047067c10a13c47aa0c479d65a9092753f6e91d/src/i3/connection.cr#L153" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="workspaces-instance-method">
+      <div class="signature">
+        
+        def <strong>workspaces</strong>
+
+        <a class="method-permalink" href="#workspaces-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns an array of all <code><a href="../I3/Message/Workspace.html">Message::Workspace</a></code>s known to i3.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/i3.cr/blob/7047067c10a13c47aa0c479d65a9092753f6e91d/src/i3/connection.cr#L58" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
